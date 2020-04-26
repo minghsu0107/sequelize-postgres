@@ -10,7 +10,8 @@
     "migrate": "sequelize-cli db:migrate",
     "migrate:reset": "sequelize-cli db:migrate:undo:all && npm run migrate",
     "pretest": "cross-env NODE_ENV=test npm run migrate:reset",
-    "test": "cross-env NODE_ENV=test jest --testTimeout=20000"
+    "test": "cross-env NODE_ENV=test jest --testTimeout=20000",
+    "coverage": "npm run pretest && jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "jest": {
     "testEnvironment": "node",
@@ -31,6 +32,7 @@
     "sequelize-cli": "^5.5.1"
   },
   "devDependencies": {
+    "coveralls": "^3.1.0",
     "jest": "^25.4.0",
     "supertest": "^4.0.2"
   }
