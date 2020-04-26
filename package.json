@@ -6,7 +6,7 @@
   "scripts": {
     "start-dev": "nodemon index.js",
     "prestart": "cross-env NODE_ENV=production sequelize-cli db:migrate",
-    "start": "node index.js",
+    "start": "cross-env NODE_ENV=production node index.js",
     "migrate": "sequelize-cli db:migrate",
     "migrate:reset": "sequelize-cli db:migrate:undo:all && npm run migrate",
     "pretest": "cross-env NODE_ENV=test npm run migrate:reset",
