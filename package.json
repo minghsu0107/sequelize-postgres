@@ -1,0 +1,37 @@
+{
+  "name": "psql-sql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-dev": "nodemon index.js",
+    "prestart": "cross-env NODE_ENV=production sequelize-cli db:migrate",
+    "start": "node index.js",
+    "migrate": "sequelize-cli db:migrate",
+    "migrate:reset": "sequelize-cli db:migrate:undo:all && npm run migrate",
+    "pretest": "cross-env NODE_ENV=test npm run migrate:reset",
+    "test": "cross-env NODE_ENV=test jest --testTimeout=20000"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "verbose": true
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "pg": "^8.0.3",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.7",
+    "sequelize-cli": "^5.5.1"
+  },
+  "devDependencies": {
+    "jest": "^25.4.0",
+    "supertest": "^4.0.2"
+  }
+}
