@@ -1,4 +1,5 @@
 # Sequelize and PostgreSQL
+[![Build Status](https://travis-ci.com/minghsu0107/sequelize-postgres.svg?branch=master)](https://travis-ci.com/minghsu0107/sequelize-postgres)
 ## Prepare DB
 First, create `.sequelizerc` and `.env`.
 
