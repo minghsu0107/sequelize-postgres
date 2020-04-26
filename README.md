@@ -1,5 +1,6 @@
 # Sequelize and PostgreSQL
 [![Build Status](https://travis-ci.com/minghsu0107/sequelize-postgres.svg?branch=master)](https://travis-ci.com/minghsu0107/sequelize-postgres)
+[![Coverage Status](https://coveralls.io/repos/github/minghsu0107/sequelize-postgres/badge.svg?branch=master)](https://coveralls.io/github/minghsu0107/sequelize-postgres?branch=master)
 ## Prepare DB
 First, create `.sequelizerc` and `.env`.
 
