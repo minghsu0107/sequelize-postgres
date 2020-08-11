@@ -4,7 +4,7 @@
 ## Prepare DB
 First, create `.sequelizerc` and `.env`.
 
-Second, run:
+Second, initialize:
 ```
 npx sequelize init
 ```
