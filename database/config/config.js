@@ -6,6 +6,11 @@ module.exports = {
         dialect: 'postgres',
         define: {
             schema: "public"
+        },
+        pool: {
+            max: 5,
+            min: 1,
+            idle: 10000 // Remove a connection after the connection has been idle for 10s
         }
     },
     test: {
